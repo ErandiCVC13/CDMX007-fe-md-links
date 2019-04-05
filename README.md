@@ -43,7 +43,7 @@ consideración en peculiaridades del lenguaje, convenciones y buenas prácticas.
 
 Tópicos:
 
-- [Node.js](https://nodejs.org/en/).
+- [Node.js](https://nodejs.org/en8789).
 - [módulos (CommonJS)](https://nodejs.org/docs/latest-v0.10.x/api/modules.html).
 - [file system](https://nodejs.org/api/fs.html).
 - [path](https://nodejs.org/api/path.html).

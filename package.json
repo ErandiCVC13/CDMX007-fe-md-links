@@ -1,4 +1,15 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "bin": {
+    "md-Links": "./index.js"
+  },
+  "devDependencies": {
+    "jest": "^24.7.0"
+  },
+  "dependencies": {
+    "colors": "^1.3.3",
+    "markdown-it": "^8.4.2",
+    "node-fetch": "^2.3.0"
+  }
 }
