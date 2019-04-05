@@ -2,20 +2,19 @@ const fs = require('fs');
 const path = require('path');
 
 const mdLink = (pathDocument) => new Promise((resolve, err) => {
-  let toAbsolutePath = path.resolve(pathDocument);
-  let extFile = path.extname(toAbsolutePath);
   
-  if (extFile === '.md') {
+  let toAbsolutePath = path.resolve(pathDocument);
+  let docExtension = path.extname(toAbsolutePath);
+  
+  if (docExtension === '.md') {
     let dataMd = fs.readFileSync(toAbsolutePath).toString();
-
     let linksMd = [];
 
     const expRegLinks = /\[((.+?))\]\((http|https|ftp|ftps).+?\)/g;
     const expRegHref = /\((http|https|ftp|ftps).+?\)/g;
     const expRegLinktext = /\[.+?\]/g;
-
-    let dataLinks = dataMd.toString();
-    let dataStrings = dataLinks.toString().match(expRegLinks);
+  
+    let dataStrings = dataMd.match(expRegLinks);
 
     for (let i in dataStrings) {
       let txtLinkMd = dataStrings[i].match(expRegLinktext)[0].substring(1, dataStrings[i].match(expRegLinktext)[0].length - 1);
