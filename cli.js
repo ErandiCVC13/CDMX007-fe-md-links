@@ -1,17 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-const mdLink = (fileName) => new Promise((resolve, err) => {
-
-  let urlToAbsolute = path.resolve(fileName);
-
-  // console.log(urlToAbsolute)
-  let extFile = path.extname(urlToAbsolute);
-  // console.log(extFile)
+const mdLink = (pathDocument) => new Promise((resolve, err) => {
+  let toAbsolutePath = path.resolve(pathDocument);
+  let extFile = path.extname(toAbsolutePath);
+  
   if (extFile === '.md') {
-    let dataMd = fs.readFileSync(urlToAbsolute).toString();
+    let dataMd = fs.readFileSync(toAbsolutePath).toString();
 
-    // console.log(dataMd);
     let linksMd = [];
 
     const expRegLinks = /\[((.+?))\]\((http|https|ftp|ftps).+?\)/g;
@@ -28,7 +24,7 @@ const mdLink = (fileName) => new Promise((resolve, err) => {
       linksMd.push({
         text: txtLinkMd,
         href: urlLinkMd,
-        file: fileName
+        file: pathDocument
       });
     }
     resolve(linksMd);
@@ -37,5 +33,6 @@ const mdLink = (fileName) => new Promise((resolve, err) => {
     console.log('Archivo ingresado no es de extención .md');
   }
 });
+
 
 module.exports = mdLink;
