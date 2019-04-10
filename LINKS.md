@@ -95,6 +95,7 @@ https://es.ign.com/pokemon-go-iphone/106516/news/pokemon-go-estadisticas-de-sus-
 - [GitHub Pages](https://pages.github.com/)
 - [Node.js](https://nodejs.org/)
 - [Jest](https://jestjs.io/)
+- [Jest](https://jestjs.io/)
 
 ---
 

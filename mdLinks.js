@@ -22,7 +22,7 @@ const mdLinks = (pathDocument) => new Promise((resolve, err) => {
       
       arrayLinksMd.push({
         href: urlsLinksMd.substring(1, urlsLinksMd.length - 1),
-        text: textLinksMd.substring(1, textLinksMd.length - 1),
+        text: textLinksMd.substring(1, textLinksMd.length - 1).slice(0,49),
         file: pathDocument
       });
     }

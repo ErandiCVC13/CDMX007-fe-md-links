@@ -1,5 +1,8 @@
 {
   "name": "md-links",
+  "jest": {
+    "verbose": true
+  },
   "version": "0.1.0",
   "bin": {
     "md-Links": "./index.js"
@@ -12,5 +15,8 @@
     "colors": "^1.3.3",
     "markdown-it": "^8.4.2",
     "node-fetch": "^2.3.0"
+  },
+  "scripts": {
+    "test": "jest --coverage"
   }
 }
