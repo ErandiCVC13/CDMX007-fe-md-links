@@ -13,18 +13,23 @@ const mdLinks = (pathDocument) => new Promise((resolve, err) => {
 
     const docMdToString = fs.readFileSync(toAbsolutePath).toString();
     const linksMatchInMd = docMdToString.match(linksRegExp);
+    console.log(linksMatchInMd)
     const arrayLinksMd = [];
 
     for (let i in linksMatchInMd) {
 
       let textLinksMd = linksMatchInMd[i].match(textLinksRegExp)[0];
+      console.log(textLinksMd)
       let urlsLinksMd = linksMatchInMd[i].match(hrefRegExp)[0];
-      
+      console.log(urlsLinksMd)
       arrayLinksMd.push({
         href: urlsLinksMd.substring(1, urlsLinksMd.length - 1),
         text: textLinksMd.substring(1, textLinksMd.length - 1).slice(0,49),
         file: pathDocument
       });
+
+      console.log(arrayLinksMd)
+
     }
     resolve(arrayLinksMd);
   } else {

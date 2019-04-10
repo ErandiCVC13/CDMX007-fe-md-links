@@ -7,6 +7,11 @@ describe('mdLinks', () => {
   it('Debería ser una función', () => {
     expect(typeof mdLinks).toBe('function');
   });
+
+  it('Deberia devolver ', () => {
+    expect(typeof mdLinks(README.md)).toEqual('array');
+  });
+
 });
 
 
