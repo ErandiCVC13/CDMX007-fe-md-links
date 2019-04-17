@@ -19,53 +19,35 @@ algunas estadísticas.
 
 ## Diagrama de Flujo
 
-A continuación, se muestra el diagrama de flujo para la implementación de la solución de md-Links.
+A continuación, se muestra el diagrama de flujo con ek algoritmo para la implementación de la solución de md-Links.
 
 ![diagrama-Flujo](assets/img/MD-LINKS.jpg)
 
+## Documentación técnica de la librería.
 
+Las herramientas y dependencias implementadas para la construcción de esta Librería fueron las siguientes:
 
-[Node.js](https://nodejs.org/es/) es un entorno de ejecución para JavaScript
-construido con el [motor de JavaScript V8 de Chrome](https://developers.google.com/v8/).
-Esto nos va a permitir ejecutar JavaScript en el entorno del sistema operativo,
-ya sea tu máquina o un servidor, lo cual nos abre las puertas para poder
-interactuar con el sistema en sí, archivos, redes, ...
+|Especificaciones técnicas|
+| ---------------------- |
+| **Lenguaje**           |
+|JavaScrips ECMAScript 6|
+| **Ejecución**           |
+|Node.js|
+| **Dependencias y modulos NPM**|
+|chalk                   |
+|node-fetch              |
+|File System             |
+|Path                    |
+| **Testing**            |
+| Jest (pruebas unitarias)                    |
+| **Otros**              |
+|RegEX                   |
+|module.exports|
+|Línea de comando CLI|
 
-En este proyecto nos alejamos un poco del navegador para construir un programa
-que se ejecute usando Node.js, donde aprenderemos sobre cómo interactuar con el
-sistema archivos, con el entorno (_process_, _env_, _stdin/stdout/stderr_), ...
+## Instalación de la librería
 
-## Objetivos
-
-El objetivo práctico de este proyecto es que aprendas cómo crear tu propia
-**librería** (o biblioteca - _library_) en JavaScript.
-
-Diseñar tu propia librería es una experiencia fundamental para cualquier
-desarrollador porque que te obliga a pensar en la interfaz (API) de tus
-_módulos_ y cómo será usado por otros developers. Debes tener especial
-consideración en peculiaridades del lenguaje, convenciones y buenas prácticas.
-
-Tópicos:
-
-- [Node.js](https://nodejs.org/en8789).
-- [módulos (CommonJS)](https://nodejs.org/docs/latest-v0.10.x/api/modules.html).
-- [file system](https://nodejs.org/api/fs.html).
-- [path](https://nodejs.org/api/path.html).
-- [http.get](https://nodejs.org/api/http.html#http_http_get_options_callback).
-- [Parsing](https://en.wikipedia.org/wiki/Parsing).
-- [markdown](https://daringfireball.net/projects/markdown/syntax).
-- [CLI](https://www.proyectobyte.com/windows/simbolo-del-sistema/uso-la-interfaz-linea-comandos).
-- [npm-scripts](https://docs.npmjs.com/misc/scripts).
-- [semver](https://semver.org/).
-
-## Consideraciones generales
-
-Este proyecto se debe "resolver" de manera individual.
-
-La librería debe estar implementada en JavaScript para ser ejecutada con
-Node.js. **Está permitido usar librerías externas**.
-
-## Parte obligatoria
+## Guía de Uso:  
 
 Tu módulo debe ser instalable via `npm install <github-user>/md-links`. Este
 módulo debe incluir tanto un _ejecutable_ que podamos invocar en la línea de
@@ -241,20 +223,7 @@ para usarlo programáticamente.
 
 ### Tech
 
-| Habilidad              |
-| ---------------------- |
-| **JavaScript**         |
-| Estilo                 |
-| Nomenclatura/semántica |
-| Funciones/modularidad  |
-| Estructuras de datos   |
-| Tests                  |
-| **SCM**                |
-| Git                    |
-| GitHub                 |
-| **CS**                 |
-| Lógica                 |
-| Arquitectura           |
+
 
 ### Habilidades Blandas
 
