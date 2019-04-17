@@ -1,7 +1,7 @@
 # Data Lovers, viaje extendido
 
-![Travel pic](https://assets-auto.rbl.ms/5fefc7fee587f0e4aca6794810f346d3c555463eed4e21eaa015d6fc9e6bcb5d)
-[Fuente](https://www.theodysseyonline.com/road-trips-worthwhile)
+![Travel pic](https://assets-auto.rbl.ms/5fef)
+[Fuente](https://www.theodysseyonline.com/road-trips-worthwh)
 
 ## Resumen
 
@@ -29,6 +29,7 @@ Enfócate en los dos puntos principales: _cargar la data usando [`fetch`](https:
 y/o _agregar gráficas con [`Chart.js`](https://www.chartjs.org/)
 o [`Google Charts`](https://developers.google.com/chart/)_. Si ya hiciste esto,
 veamos mas opciones.
+[`Google `](https://developers.google.com/chart/)
 
 2.2. Si quieres explorar un poco más sobre el Diseño de Experiencia de Usuario
 (_UX Design_), te proponemos hacer sesiones de _testeo de usabilidad con
