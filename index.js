@@ -9,16 +9,16 @@ let options = {
   stats: false
 }
 
-mdLinks(pathDoc, options).then((response) => {
+mdLinks(pathDoc, options).then((arrayLinksMd) => {
 
-  if (process.argv[3] === '--validate' && process.argv[4] === '--stats'|| process.argv[4] === '--validate' && process.argv[3] === '--stats') {
+  if (process.argv[3] === '--validate' && process.argv[4] === '--stats' || process.argv[4] === '--validate' && process.argv[3] === '--stats') {
     options.validate = true;
     options.stats = true;
     let urlArray = [];
     let arrayStatusOk = 0;
     let arrayStatusFail = [];
-    
-    response.forEach(element => {
+
+    arrayLinksMd.forEach(element => {
 
       urlArray.push(element.href)
 
@@ -36,15 +36,17 @@ mdLinks(pathDoc, options).then((response) => {
     let uniqs = new Set(urlArray);
 
     setTimeout(function () {
-      console.log(`El TOTAL de links en el archivo ${chalk.cyanBright(pathDoc)} es: ${chalk.yellowBright(response.length)} `);
-      console.log(`El total de links OK ✔ en el archivo ${chalk.cyanBright(pathDoc)} es: ${chalk.green(arrayStatusOk)}`);
-      console.log(`El total de links FAIL ✘ en el archivo ${chalk.cyanBright(pathDoc)} es: ${chalk.red(arrayStatusFail.length)} `);
-      console.log(`El total de links UNICOS en el archivo ${chalk.cyanBright(pathDoc)} es: ${chalk.yellowBright([...uniqs].length)} `);
+      console.log(`|Links de: ${chalk.cyanBright(pathDoc)} |TOTAL  | ${chalk.yellowBright(arrayLinksMd.length)} `);
+      console.log(`|Links de: ${chalk.cyanBright(pathDoc)} |UNICOS | ${chalk.blueBright(uniqs.size)} `);
+      console.log(`|Links de: ${chalk.cyanBright(pathDoc)} |OK     | ${chalk.green(arrayStatusOk)}`);
+      console.log(`|Links de: ${chalk.cyanBright(pathDoc)} |FAIL   | ${chalk.red(arrayStatusFail.length)} `);
+
+
     }, 4000);
 
   } else if (process.argv[3] === '--validate') {
     options.validate = true;
-    response.forEach((element) => {
+    arrayLinksMd.forEach((element) => {
       fetch(element.href).then(res => {
 
         if (res.status >= 200 && res.status <= 309) {
@@ -62,18 +64,16 @@ mdLinks(pathDoc, options).then((response) => {
   } else if (process.argv[3] === '--stats') {
     options.stats = true;
     let urlArray = [];
-    response.forEach(element => {
+    arrayLinksMd.forEach(element => {
       urlArray.push(element.href)
     })
 
     let uniqs = new Set(urlArray);
 
-    console.log(`El TOTAL de links en el archivo ${chalk.cyanBright(pathDoc)} es: ${chalk.yellowBright(response.length)} `);
-    console.log(`El TOTAL de links UNICOS en el archivo ${chalk.cyanBright(pathDoc)} es: ${chalk.yellowBright([...uniqs].length)} `);
-
-
+    console.log(`|Links de: ${chalk.cyanBright(pathDoc)} |TOTAL  | ${chalk.yellowBright(arrayLinksMd.length)} `);
+    console.log(`|Links de: ${chalk.cyanBright(pathDoc)} |UNICOS | ${chalk.blueBright(uniqs.size)} `);
   } else {
-    response.forEach((element) => {
+    arrayLinksMd.forEach((element) => {
       console.log(`|File: ${chalk.cyanBright(element.file)} | Text: ${chalk.yellowBright(element.text)} | Link: ${chalk.underline.blueBright(element.href)}`);
     });
   }
