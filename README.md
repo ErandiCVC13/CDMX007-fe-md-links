@@ -46,10 +46,19 @@ Las herramientas y dependencias implementadas para la construcción de esta Libr
 |Línea de comando CLI|
 
 ## Instalación de la librería
-Con el comando `npm install ErandiCVC13/md-links` podemos instalar directamente
-desde GitHub. 
-Puede instalarse via `npm install --global ErandiCVC13/md-links` si se quiere implementar globalmente.
-ó `npm i --global ErandiCVC13/md-links`
+Podemos instalar directamente desde GitHub con el comando:
+
+`npm install ErandiCVC13/md-links`
+
+Sí se quiere implementar globalmente. Puede instalarse via:
+
+ `npm install --global ErandiCVC13/md-links`
+
+ ó 
+ 
+ `npm i --global ErandiCVC13/md-links`
+
+
 Este módulo incluye ejecutable y una interfaz que podamos importar con `require` para usarlo programáticamente.
 
 ## Guía de Uso:  
