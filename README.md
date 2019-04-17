@@ -48,15 +48,15 @@ Las herramientas y dependencias implementadas para la construcción de esta Libr
 ## Instalación de la librería
 Podemos instalar directamente desde GitHub con el comando:
 
-`npm install ErandiCVC13/md-links`
+`npm install erandicvc-md-links`
 
 Sí se quiere implementar globalmente. Puede instalarse via:
 
- `npm install --global ErandiCVC13/md-links`
+ `npm install --global erandicvc-md-links`
 
  ó 
  
- `npm i --global ErandiCVC13/md-links`
+ `npm i --global erandicvc-md-links`
 
 
 Este módulo incluye ejecutable y una interfaz que podamos importar con `require` para usarlo programáticamente.
@@ -124,14 +124,18 @@ necesiten de los resultados de la validación.
 Por ejemplo:
 
 ![Ejemplo-7](assets/img/md-Link-ejemplo-7.png)
+
 ó
+
 ![Ejemplo-8](assets/img/md-Link-ejemplo-8.png)
+
+
 Resultado:
 
 ![Ejemplo-9](assets/img/md-Link-ejemplo-9.png)
 
 ## Autor
 
-Erandi Carolina Vázquez Cuervo
+- Erandi Carolina Vázquez Cuervo
 
 
