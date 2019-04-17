@@ -30,7 +30,7 @@ Las herramientas y dependencias implementadas para la construcción de esta Libr
 |Especificaciones técnicas|
 | ---------------------- |
 | **Lenguaje**           |
-|JavaScrips ECMAScript 6|
+|JavaScript ECMAScript 6|
 | **Ejecución**           |
 |Node.js|
 | **Dependencias y modulos NPM**|
@@ -46,51 +46,13 @@ Las herramientas y dependencias implementadas para la construcción de esta Libr
 |Línea de comando CLI|
 
 ## Instalación de la librería
+Con el comando `npm install ErandiCVC13/md-links` podemos instalar directamente
+desde GitHub. 
+Puede instalarse via `npm install --global ErandiCVC13/md-links` si se quiere implementar globalmente.
+ó `npm i --global ErandiCVC13/md-links`
+Este módulo incluye ejecutable y una interfaz que podamos importar con `require` para usarlo programáticamente.
 
 ## Guía de Uso:  
-
-Tu módulo debe ser instalable via `npm install <github-user>/md-links`. Este
-módulo debe incluir tanto un _ejecutable_ que podamos invocar en la línea de
-comando como una interfaz que podamos importar con `require` para usarlo
-programáticamente.
-
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-_lines_ y _branches_. Te recomendamos explorar [Jest](https://jestjs.io/)
-para tus pruebas unitarias.
-
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
-
-Antes de comenzar a codear, es necesario crear un plan de acción. Esto debería
-quedar detallado en el `README.md` de tu repo y en una serie de _issues_
-y _milestones_ para priorizar y organizar el trabajo, y para poder hacer
-seguimiento de tu progreso.
-
-Dentro de cada _milestone_ se crearán y asignarán los _issues_ que cada quien
-considere necesarios.
-
-También te sugerimos que empieces a utilizar los [project boards](https://help.github.com/en/articles/about-project-boards) de github que te
-ayudaran a organizar y priorizar su trabajo.
-
-### Archivos del proyecto
-
-- `README.md` con descripción del módulo, instrucciones de instalación/uso,
-  documentación del API y ejemplos. Todo lo relevante para que cualquier
-  developer que quiera usar tu librería pueda hacerlo sin inconvenientes.
-- `index.js`: Desde este archivo debes exportar una función (`mdLinks`).
-- `package.json` con nombre, versión, descripción, autores, licencia,
-  dependencias, scripts (pretest, test, ...)
-- `.editorconfig` con configuración para editores de texto.
-- `.eslintrc` con configuración para linter.
-- `.gitignore` para ignorar `node_modules` u otras carpetas que no deban
-  incluirse en control de versiones (`git`).
-- `test/md-links.spec.js` debe contener los tests unitarios para la función
-  `mdLinks()`. Tu implementación debe pasar estos test.
-
-### JavaScript API
-
-El módulo debe poder importarse en otros scripts de Node.js y debe ofrecer la
-siguiente interfaz:
 
 #### `mdLinks(path, options)`
 
@@ -144,7 +106,7 @@ mdLinks("./some/dir")
 
 ### CLI (Command Line Interface - Interfaz de Línea de Comando)
 
-El ejecutable de nuestra aplicación debe poder ejecutarse de la siguiente
+El ejecutable de nuestra aplicación se puede ejecutar de la siguiente
 manera a través de la terminal:
 
 `md-links <path-to-file> [options]`
